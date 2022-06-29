@@ -1,18 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TheHeader @textChanged="onTextChanged"></TheHeader>
+    <TheMain  :movieList="movieList"></TheMain>
+    <TheCard></TheCard>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "./components/TheHeader.vue";
+import TheMain from "./components/TheMain.vue";
+import TheCard from "./components/TheCard.vue";
+import axios from "axios";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    TheHeader,
+    TheMain,
+    TheCard,
+  },
+  data() {
+    return  {
+      searchText: "",
+      movieList: [],
+    }
+
+  },
+  methods: {
+    onTextChanged(userInput) {
+      this.searchText = userInput;
+
+      axios
+      .get("https://api.themoviedb.org/3/search/movie", {
+        params: {
+            api_key: "2df6dd2ba6ad8cab7d65bcdb0654d59d",
+            query: userInput,
+            },
+        })
+        .then((resp) => {
+            this.movieList = resp.data.results
+        })
+    }
+  },
+  
 }
 </script>
 
