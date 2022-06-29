@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheHeader @textChanged="onTextChanged"></TheHeader>
-    <TheMain  :movieList="movieList"></TheMain>
+    <TheMain  :movieList="movieList" :seriesList="seriesList"></TheMain>
     <TheCard></TheCard>
   </div>
 </template>
@@ -23,6 +23,7 @@ export default {
     return  {
       searchText: "",
       movieList: [],
+      seriesList: [],
     }
 
   },
@@ -40,6 +41,17 @@ export default {
         .then((resp) => {
             this.movieList = resp.data.results
         })
+
+        axios
+        .get("https://api.themoviedb.org/3/search/tv", {
+          params: {
+              api_key: "2df6dd2ba6ad8cab7d65bcdb0654d59d",
+              query: userInput,
+              },
+          })
+          .then((resp) => {
+              this.seriesList = resp.data.results
+          })
     }
   },
   
