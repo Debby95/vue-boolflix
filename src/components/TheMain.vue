@@ -23,15 +23,15 @@
         <div class="seriesList">
             <!-- section series list with v-for  -->
             <ul>
-                <li v-for="movie in seriesList" :key="movie.id">
+                <li v-for="series in seriesList" :key="series.id">
                     <span class="fw-bold">Name series:</span>
-                        {{movie.name}}
+                        {{series.name}}
                     <span class="fw-bold">Original name series:</span>
-                        {{movie.original_name}}
+                        {{series.original_name}}
                     <span class="fw-bold">Original language series:</span>
-                        {{movie.original_language}}
+                        {{series.original_language}}
                     <span class="fw-bold">Vote average series:</span>
-                        {{movie.vote_average}}
+                        {{series.vote_average}}
                 </li>
             </ul>
         </div>
