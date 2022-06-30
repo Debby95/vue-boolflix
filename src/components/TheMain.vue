@@ -14,6 +14,8 @@
                     <span class="fw-bold">Vote average movie</span>
                         {{movie.vote_average}}
                 </li>
+
+                
             </ul>
             
         </div>
@@ -21,15 +23,15 @@
         <div class="seriesList">
             <!-- section series list with v-for  -->
             <ul>
-                <li v-for="series in seriesList" :key="series.id">
+                <li v-for="movie in seriesList" :key="movie.id">
                     <span class="fw-bold">Name series:</span>
-                        {{series.name}}
+                        {{movie.name}}
                     <span class="fw-bold">Original name series:</span>
-                        {{series.original_name}}
+                        {{movie.original_name}}
                     <span class="fw-bold">Original language series:</span>
-                        {{series.original_language}}
+                        {{movie.original_language}}
                     <span class="fw-bold">Vote average series:</span>
-                        {{series.vote_average}}
+                        {{movie.vote_average}}
                 </li>
             </ul>
         </div>
@@ -56,8 +58,10 @@ export default {
 <style>
     ul {
         list-style-type: none;
+        display: flex;
     }
     li {
         padding-bottom: 20px;
     }
+
 </style>

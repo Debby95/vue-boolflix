@@ -18,7 +18,7 @@ export default {
     TheHeader,
     TheMain,
     TheCard,
-  },
+},
   data() {
     return  {
       searchText: "",
@@ -30,7 +30,7 @@ export default {
   methods: {
     onTextChanged(userInput) {
       this.searchText = userInput;
-
+      
       axios
       .get("https://api.themoviedb.org/3/search/movie", {
         params: {
