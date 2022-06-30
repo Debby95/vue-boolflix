@@ -1,6 +1,6 @@
 <template>
     <div class="thecard">
-        {{movieTitle}}
+        <h4>{{movieTitle}}</h4>
         <span class="fi" :class="'fi-' + countryFlag"></span>
 
 

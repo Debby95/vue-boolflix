@@ -1,14 +1,16 @@
 <template>
-
-    <div class="d-flex justify-content-between mx-3 navbar">
-        <img class="bool-logo" src="../assets/img/logo.png" alt="">
-        <div class="input-group w-25 mx-3">
-            <input type="text" class="form-control" v-model="userInput">
-            <div class="input-group-append">
-                <button class="btn btn-outline-light" type="button" @click="startSearch">Search</button>
+    <div class=" bg-dark">
+        <div class="navbar mx-3  ">
+            <img class="bool-logo" src="../assets/img/logo.png" alt="">
+            <div class="input-group w-25 mx-3">
+                <input type="text" class="form-control" v-model="userInput">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light" type="button" @click="startSearch">Search</button>
+                </div>
             </div>
         </div>
     </div>
+    
     
 </template>
 
@@ -32,11 +34,11 @@ export default {
 
 <style>
     .bool-logo {
-        width: 100px;
+        width: 200px;
     }
 
     .navbar {
-        background-color: black;
         height: 100px;
+        width: 100%;
     }
 </style>
