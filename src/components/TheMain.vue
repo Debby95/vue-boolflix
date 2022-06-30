@@ -80,7 +80,7 @@ export default {
     }
 
     .bg-movie {
-        background-color: black;
+        background-color: #141414;
         width: 100%;
     }
 

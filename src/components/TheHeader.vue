@@ -1,5 +1,4 @@
 <template>
-    <div class=" bg-dark">
         <div class="navbar mx-3  ">
             <img class="bool-logo" src="../assets/img/logo.png" alt="">
             <div class="input-group w-25 mx-3">
@@ -9,9 +8,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-    
 </template>
 
 <script>
@@ -40,5 +36,6 @@ export default {
     .navbar {
         height: 100px;
         width: 100%;
+        background-color: black;
     }
 </style>
