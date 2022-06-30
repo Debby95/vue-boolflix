@@ -2,8 +2,8 @@
     <div class="bg-movie text-white pt-5">
         <div class="movieList ">
             <div class="movie-series-section-title">MOVIES</div>
-            <div class="row row-cols-3">
-                <div class="col" v-for="movie in movieList" :key="movie.id">
+            <div class="row ">
+                <div class="col col-sm-6 col-lg-3" v-for="movie in movieList" :key="movie.id">
                     <!-- section movie list with v-for  -->
                     <ul>
                         <li >
@@ -24,8 +24,8 @@
 
         <div class="seriesList">
             <div class="movie-series-section-title">TV SERIES</div>
-            <div class="row row-cols-3 ">
-                <div class="col" v-for="series in seriesList" :key="series.id">
+            <div class="row  ">
+                <div class="col col-sm-6 col-lg-3" v-for="series in seriesList" :key="series.id">
                     <!-- section series list with v-for  -->
                     <ul>
                         <li>
