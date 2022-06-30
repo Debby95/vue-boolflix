@@ -1,10 +1,8 @@
 <template>
-    <div class="thecard">
+    <div class="the-card">
         <h4>{{movieTitle}}</h4>
         <span class="fi" :class="'fi-' + countryFlag"></span>
-
-
-        {{movieImg}}
+        <!-- {{movieImg}} -->
         <img :src="movieImg" alt="">
 
         
@@ -42,4 +40,9 @@ export default {
 </script>
 
 <style>
+    .the-card:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 </style>
