@@ -15,26 +15,27 @@
 export default {
     name: "TheCard",
     props: {
-        movie: Object,
+        showMovieAndSeries: Object,
     },
     computed: {
         movieTitle() {
-        if (this.movie.name) {
-            return this.movie.name;
+        if (this.showMovieAndSeries.name) {
+            return this.showMovieAndSeries.name;
         }
 
-        return this.movie.title;
+        return this.showMovieAndSeries.title;
         
         },
+        
         countryFlag() {
 
-            return this.movie.original_language;
+            return this.showMovieAndSeries.original_language;
         
         },
         movieImg() {
             const basicURL = "https://image.tmdb.org/t/p/";
             const imgSize = "w342";
-            return basicURL+ imgSize + this.movie.poster_path;
+            return basicURL+ imgSize + this.showMovieAndSeries.poster_path;
         }
     },
 }

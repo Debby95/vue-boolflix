@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div class="movieList">
+        <div class="movieList pt-5">
             <!-- section movie list with v-for  -->
             <ul>
                 <li v-for="movie in movieList" :key="movie.id">
-                    <TheCard :movie="movie"></TheCard>
+                    <TheCard :showMovieAndSeries="movie"></TheCard>
                     <span class="fw-bold">Title Movie:</span>
                         {{movie.title}}
                     <span class="fw-bold">Original title movie</span>
@@ -14,8 +14,6 @@
                     <span class="fw-bold">Vote average movie</span>
                         {{movie.vote_average}}
                 </li>
-
-                
             </ul>
             
         </div>
@@ -24,6 +22,7 @@
             <!-- section series list with v-for  -->
             <ul>
                 <li v-for="series in seriesList" :key="series.id">
+                <TheCard :showMovieAndSeries="series"></TheCard>
                     <span class="fw-bold">Name series:</span>
                         {{series.name}}
                     <span class="fw-bold">Original name series:</span>
